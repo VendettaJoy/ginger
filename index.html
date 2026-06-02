@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Ginger</title>
+		<link rel="stylesheet" href="/src/style.css" />
+	</head>
+	<body class="content-wrapper">
+		<!-- BG Blur -->
+		<div class="blur-bg"></div>
+		<header>
+			<!-- Logotype -->
+			<img
+				id="logotype"
+				src="/images/ginger-logotype.svg"
+				alt="Ginger logotype" />
+
+			<!-- Navigation -->
+			<nav>
+				<span id="nav-label" hidden>Navigation</span>
+
+				<!-- Hamburger Toggle -->
+				<button
+					type="button"
+					class="nav-hamburger"
+					aria-pressed="false"
+					aria-expanded="false"
+					aria-labelledby="nav-label">
+					<div class="bar"></div>
+				</button>
+
+				<!-- Navigation Menu -->
+				<div
+					class="nav-menu"
+					role="dialog"
+					expanded="false"
+					aria-labelledby="nav-label">
+					<ul class="nav-links">
+						<li class="nav-item">
+							<a class="nav-link" href="#">Study</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">FAQ</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">About</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Donate</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Support</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+
+		<main>
+			<article class="hero-wrapper">
+				<!-- Heading -->
+				<h1 class="hero-heading">
+					<div class="heading-mobile">
+						Learning to Code just got
+						<span class="carat-wrapper">
+							Easier <span class="carat"></span>
+						</span>
+					</div>
+
+					<div class="heading-tablet-desktop">
+						Learning to Code just got Easier and
+						<span class="carat-wrapper">
+							Accessible <span class="carat"></span>
+						</span>
+					</div>
+				</h1>
+
+				<!-- Content for Mobile -->
+				<p class="hero-content content-mobile">
+					Now with ZERO Internet
+				</p>
+
+				<!-- Content for Tablet -->
+				<div class="hero-content content-tablet">
+					<p>
+						All you need is your device, a trusty code editor, and
+						zero internet.
+					</p>
+					<p>Like seriously, that's it.</p>
+				</div>
+
+				<!-- Content for Desktop -->
+				<div class="hero-content content-desktop">
+					<p>
+						All you need is your device, a trusty code editor, and
+						zero internet connection.
+					</p>
+					<p>Like seriously, that's it.</p>
+				</div>
+
+				<!-- CTA Buttons -->
+				<div class="hero-cta-btns">
+					<button type="button">Start Now!</button>
+					<button type="button">Why Us?</button>
+				</div>
+			</article>
+		</main>
+
+		<script src="/src/main.js"></script>
+	</body>
+</html>
