@@ -75,7 +75,9 @@
 @layer base {
 	html,
 	body {
-		scroll-behavior: smooth;
+		margin: 0;
+		height: 100%;
+		overflow: hidden;
 	}
 
 	body {
@@ -89,19 +91,14 @@
 .content-wrapper {
 	padding-inline: 1.5rem;
 	padding-block: 2rem;
-	/* position: relative; */
 }
 
-/* BG Blur */
-.blur-bg {
-	z-index: -1;
-	position: fixed;
-	width: 100vw;
-	height: 100vh;
+/* Body BG & Blur */
+.body-bg {
 	background-image: url("/images/ginger-motto-bg.svg");
 	background-repeat: no-repeat;
-	background-position: 30% 50%;
-	filter: blur(9px);
+	background-position: top -175px left -200px;
+	backdrop-filter: blur(8px);
 }
 
 /* Header */
@@ -128,7 +125,6 @@ header {
 
 	width: 2rem;
 	height: 2rem;
-	/* background-color: pink; */
 
 	display: block;
 	position: relative;
@@ -176,7 +172,7 @@ header {
 	padding-inline-start: 1rem;
 	background-color: var(--c-secondary);
 	translate: 100vw 0;
-	transition: 0.5s ease-in-out;
+	transition: translate 0.5s ease-in-out;
 
 	display: flex;
 	align-items: center;
@@ -243,7 +239,6 @@ header {
 /* CTA Buttons */
 .hero-cta-btns {
 	display: grid;
-	grid-row: 2 (1fr);
 	width: 100%;
 	gap: 1rem;
 
@@ -264,14 +259,14 @@ header {
 	}
 }
 
-.popup-kitty {
-		position: fixed;
-		bottom: 0;
-		left: -25px;
-		width: 12rem;
-		transform: rotate(45deg);
-		z-index: -2;
-	}
+/* Peek-a-boo Kitty */
+.peek-a-boo-kitty::before {
+	content: url("/images/ginger-logomark-tablet.svg");
+	position: fixed;
+	bottom: -64px;
+	left: -48px;
+	z-index: -2;
+}
 
 /* Media Queries */
 
@@ -280,7 +275,7 @@ header {
 	.heading-tablet-desktop,
 	.content-desktop,
 	.content-tablet,
-	.popup-kitty {
+	.peek-a-boo-kitty {
 		display: none;
 	}
 
@@ -300,13 +295,13 @@ header {
 
 	.heading-tablet-desktop,
 	.content-tablet,
-	.popup-kitty {
+	.peek-a-boo-kitty {
 		display: block;
 	}
 
-	.blur-bg {
-		background-position: -42% -60%;
-		filter: blur(0px);
+	.body-bg {
+		background-position: top 75px left 190px;
+		backdrop-filter: blur(0px);
 	}
 
 	#logotype {
@@ -328,7 +323,7 @@ header {
 
 	.hero-wrapper {
 		position: relative;
-		/* background-color: peru; */
+		max-width: 28em;
 		margin-block-start: 4.5rem;
 		margin-inline: 2.5rem;
 
@@ -337,18 +332,19 @@ header {
 
 		border: 5px solid var(--c-primary);
 		border-radius: 1rem;
-	}
 
-	.hero-wrapper::before {
-		position: absolute;
-		content: "";
-		height: 100%;
-		width: 100%;
-		/* background-color: var(--c-secondary); */
 		backdrop-filter: blur(8px);
-		z-index: -1;
+
+		/* always centered horizontally */
+		position: absolute;
+		margin-left: auto;
+		margin-right: auto;
+		left: 0;
+		right: 0;
+		top: 5rem;
 	}
 
+	/* hero window decor */
 	.hero-wrapper::after {
 		position: absolute;
 		content: url("/icons/window-btns.svg");
@@ -389,19 +385,33 @@ header {
 		}
 
 		button:nth-child(2) {
-			padding-inline: clamp(1.5em,6vw,2.5em);
+			padding-inline: clamp(1.5em, 6vw, 2.5em);
 		}
 	}
 }
 
-/* Desktop */
-@media only screen and (min-width: 52em) {
-	/* body {
-		background-color: peru;
-	} */
+/* Tablet Additional BP for Landscape */
+@media only screen and (min-width: 62em) {
+	.hero-wrapper {
+		max-width: 53.5rem;
+		padding-block: 1.5rem;
+		top: 4rem;
+	}
 
+	.hero-heading {
+		margin-block-end: 0;
+	}
+
+	.hero-content {
+		margin-block-end: 1em;
+	}
+}
+
+/* Desktop */
+@media only screen and (min-width: 80em) {
 	.heading-tablet-desktop,
-	.content-desktop {
+	.content-desktop,
+	.peek-a-boo-kitty {
 		display: block;
 	}
 
@@ -409,5 +419,122 @@ header {
 	.heading-mobile,
 	.content-mobile {
 		display: none;
+	}
+
+	.body-bg {
+		background-position: top 140px right -110px;
+	}
+
+	.hero-wrapper {
+		max-width: 67.5rem;
+		padding-block: 4.5rem;
+		padding-inline: 6rem;
+		border: 6px solid var(--c-primary);
+
+		top: 8rem;
+	}
+
+	.hero-heading {
+		font-size: var(--fs-heading-1);
+		line-height: var(--lh-heading-1);
+		margin-block: 0.6em;
+	}
+
+	.carat {
+		top: 0.06em;
+	}
+
+	.hero-content {
+		margin-block-end: 2.5em;
+	}
+
+	.hero-content p {
+		padding-inline-end: 7em;
+		line-height: 30px;
+	}
+
+	.hero-cta-btns {
+		button {
+			width: 15em;
+		}
+
+		button:nth-child(1) {
+			flex-grow: 0;
+			margin-inline-end: 5em;
+		}
+
+		button:nth-child(1):hover {
+			background-color: var(--c-secondary);
+			color: var(--c-primary);
+		}
+
+		button:nth-child(2):hover {
+			background-color: var(--c-primary);
+			color: var(--c-secondary);
+		}
+	}
+
+	.peek-a-boo-kitty::before {
+		content: url("/images/ginger-logomark-desktop.svg");
+		bottom: -120px;
+		left: -112px;
+	}
+}
+
+/* Header Only Media Query */
+/* Remove Hamburger and make Nav visible */
+@media only screen and (min-width: 80em) {
+	#logotype {
+		position: absolute;
+		z-index: 1;
+		width: 17.5rem;
+	}
+
+	/* Position Nav Right until 100em breakpoint */
+	nav {
+		width: 100vw;
+		display: flex;
+		justify-content: right;
+	}
+
+	.nav-hamburger {
+		display: none;
+	}
+
+	.nav-menu {
+		position: relative;
+		translate: 0;
+		background: none;
+	}
+
+	.nav-links {
+		display: inline-flex;
+		gap: 1em;
+		
+		.nav-item{
+			font-size: var(--fs-paragraph);
+			padding-inline: 1em;
+		}
+
+		.nav-link {
+			padding-inline: 1em;
+			transition: all 0s;
+		}
+
+		.nav-item:hover {
+			cursor: pointer;
+			background-color: var(--c-primary);
+
+			.nav-link {
+				color: var(--c-secondary);
+			}
+		}
+	}
+}
+
+/* Position Nav Center */
+@media only screen and (min-width: 100em) {
+	nav {
+		justify-content: center;
 	}
 }
