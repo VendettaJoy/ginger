@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="276.342" height="280.584" viewBox="0 0 276.342 280.584" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g transform="matrix(0.682 0.731 -0.731 0.682 112.662 0)">
+    <path d="M25.5628 0C25.5628 0 0 21.9556 1.90735e-06 52.3788C1.90735e-06 82.802 25.5628 104.758 25.5628 104.758" fill="none" stroke-width="8" stroke="#1E1E1E" stroke-linecap="round" stroke-linejoin="round" transform="matrix(1 -0 0 1 29.322 44.853)" />
+    <path d="M0 0C0 0 25.5629 21.9556 25.5629 52.3788C25.5629 82.802 0 104.758 0 104.758" fill="none" stroke-width="8" stroke="#1E1E1E" stroke-linecap="round" stroke-linejoin="round" transform="matrix(1 0 0 1 185.118 44.853)" />
+    <path d="M0 29.332L20.9515 -4.76837e-07L41.9029 29.332" fill="none" stroke-width="8" stroke="#1E1E1E" stroke-linecap="round" stroke-linejoin="round" transform="matrix(1 -0 0 1 66.147 4.434)" />
+    <path d="M0 29.332L20.9515 -4.76837e-07L41.903 29.332" fill="none" stroke-width="8" stroke="#1E1E1E" stroke-linecap="round" stroke-linejoin="round" transform="matrix(1 -0 0 1 131.952 4.434)" />
+    <path d="M0 0L46.0154 0" fill="none" stroke-width="8" stroke="#1E1E1E" stroke-linecap="round" stroke-linejoin="round" transform="matrix(1 0 0 1 4.434 92.334)" />
+    <path d="M0 0L46.0154 0" fill="none" stroke-width="8" stroke="#1E1E1E" stroke-linecap="round" stroke-linejoin="round" transform="matrix(1 0 0 1 4.434 110.356)" />
+    <path d="M0 9.86569C2.22376 5.89503 4.44733 1.92448 7.49746 1.1023C10.5474 0.280128 14.4237 2.60644 18.2998 4.93285C22.176 7.25926 26.0521 9.58552 29.1023 8.76334C32.1522 7.94122 34.376 3.97061 36.5997 0" fill="none" stroke-width="8" stroke="#1E1E1E" stroke-linecap="round" stroke-linejoin="round" transform="matrix(1 0 0 1 66.182 71.335)" />
+    <path d="M19.2293 9.61467C19.2293 14.9247 14.9247 19.2293 9.61467 19.2293C4.30464 19.2293 0 14.9247 0 9.61467C0 4.30465 4.30464 0 9.61467 0C14.9247 0 19.2293 4.30464 19.2293 9.61467C19.2293 9.61467 19.2293 9.61467 19.2293 9.61467Z" fill="#1E1E1E" transform="matrix(1 -0 0 1 142.408 66.106)" />
+    <path d="M0 0C0 4.43054 0 8.86108 2.86552 11.0763C5.73084 13.2916 11.4617 13.2916 14.3272 9.96861C17.1925 6.64565 17.1925 0 17.1925 0C17.1925 0 17.1925 6.64581 20.0581 9.96872C22.9236 13.2916 28.6544 13.2916 31.5197 11.0764C34.3853 8.86108 34.3853 4.43054 34.3853 0" fill="none" stroke-width="8" stroke="#1E1E1E" stroke-linecap="round" stroke-linejoin="round" transform="matrix(1 -0 0 1 102.95 97.36)" />
+    <path d="M0 0L46.0156 0" fill="none" stroke-width="8" stroke="#1E1E1E" stroke-linecap="round" stroke-linejoin="round" transform="matrix(1 0 0 1 189.551 92.334)" />
+    <path d="M0 0L46.0156 0" fill="none" stroke-width="8" stroke="#1E1E1E" stroke-linecap="round" stroke-linejoin="round" transform="matrix(1 0 0 1 189.551 110.356)" />
+  </g>
+</svg>
