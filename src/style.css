@@ -510,8 +510,8 @@ header {
 	.nav-links {
 		display: inline-flex;
 		gap: 1em;
-		
-		.nav-item{
+
+		.nav-item {
 			font-size: var(--fs-paragraph);
 			padding-inline: 1em;
 		}
@@ -536,5 +536,18 @@ header {
 @media only screen and (min-width: 100em) {
 	nav {
 		justify-content: center;
+	}
+}
+
+/* User prefers-reduced-motion */
+@media (max-width: 80em) and (prefers-reduced-motion: reduce) {
+	.nav-menu {
+		translate: 0;
+		opacity: 0;
+		transition: opacity 0.5s ease-in-out;
+	}
+
+	.nav-menu[expanded="true"] {
+		opacity: 1;
 	}
 }
