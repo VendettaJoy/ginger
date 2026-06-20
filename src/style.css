@@ -139,9 +139,14 @@ header {
 	position: absolute;
 	height: 0.3rem;
 	margin: 0.25rem 0;
-	background-color: black;
+	background-color: var(--c-primary);
 	border-radius: 20rem;
-	transition: 0.3s ease-in-out;
+	transition: width 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.nav-hamburger:focus .bar,
+.nav-hamburger:focus:before {
+	background-color: var(--c-accent);
 }
 
 .nav-hamburger:before {
@@ -463,12 +468,14 @@ header {
 			margin-inline-end: 5em;
 		}
 
-		button:nth-child(1):hover {
+		button:nth-child(1):hover,
+		button:nth-child(1):focus {
 			background-color: var(--c-secondary);
 			color: var(--c-primary);
 		}
 
-		button:nth-child(2):hover {
+		button:nth-child(2):hover,
+		button:nth-child(2):focus {
 			background-color: var(--c-primary);
 			color: var(--c-secondary);
 		}
