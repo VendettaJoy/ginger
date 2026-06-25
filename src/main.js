@@ -6,12 +6,12 @@ const main = document.querySelector("main");
 
 function checkWindowSize(e) {
 	if (e.matches) {
-		console.log("nav hidden");
+		// console.log("nav hidden");
 		// make nav not interacitve/tabbable
 		nav.setAttribute("inert", "");
 		nav.style.transition = "none";
 	} else {
-		console.log("nav shown");
+		// console.log("nav shown");
 		// make nav interactive/tabbable
 		nav.removeAttribute("inert");
 	}
