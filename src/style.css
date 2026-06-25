@@ -99,7 +99,6 @@
 	background-repeat: no-repeat;
 	background-position: top -175px left -200px;
 	backdrop-filter: blur(8px);
-	-webkit-backdrop-filter: blur(8px);
 }
 
 /* Header */
@@ -308,7 +307,6 @@ header {
 	.body-bg {
 		background-position: top 75px left 190px;
 		backdrop-filter: blur(0px);
-		-webkit-backdrop-filter: blur(0px);
 	}
 
 	#logotype {
@@ -341,7 +339,6 @@ header {
 		border-radius: 1rem;
 
 		backdrop-filter: blur(8px);
-		-webkit-backdrop-filter: blur(8px);
 
 		/* always centered horizontally */
 		position: absolute;
