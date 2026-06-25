@@ -22,7 +22,7 @@ Code Ginger's hero section from scratch as per the design file and account for t
 - Screen-Reader Friendly
 - Keyboard Navigation Friendly
 
---- [LIVE WEBSITE]() ---
+--- [LIVE WEBSITE](https://ginger-tm.netlify.app/) ---
 
 ## Project Screenshots
  
